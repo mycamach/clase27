@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
-    @product. category_id = params[:category_id]
+    @product.category_id = params[:category_id]
     if @product.save
       redirect_to category_path(@product.category_id)
     else
